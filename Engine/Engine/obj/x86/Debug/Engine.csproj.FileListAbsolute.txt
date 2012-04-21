@@ -15,3 +15,5 @@ C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\obj\x86\Debug\E
 C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texWorld.xnb
 C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texPlayer.xnb
 C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texFaceNeutral.xnb
+C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texHudButton.xnb
+C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texHudButtonText.xnb

@@ -28,6 +28,24 @@
       <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texFaceNeutral.xnb</Output>
       <Time>2012-04-21T13:34:29.2456334-04:00</Time>
     </Item>
+    <Item>
+      <Source>texHudButton.png</Source>
+      <Name>texHudButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texHudButton.xnb</Output>
+      <Time>2012-04-21T16:15:58.8638478-04:00</Time>
+    </Item>
+    <Item>
+      <Source>texHudButtonText.png</Source>
+      <Name>texHudButtonText</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texHudButtonText.xnb</Output>
+      <Time>2012-04-21T16:24:57.3726488-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{FA686DF9-B4AD-410B-8746-0C4E6F0194F9}</ContentProjectGUID>

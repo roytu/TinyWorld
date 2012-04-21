@@ -11,7 +11,10 @@ namespace Engine
     {
         public Hud()
         {
-            Sprite = Game1.texWorld;
+            Sprite = null;
+            HudButton b = new HudButton(0);
+            b.x = 715;
+            b.y = 75;
         }
         public override void Update()
         {

@@ -55,6 +55,8 @@ namespace Engine
         public static Texture2D texWorld;
         public static Texture2D texPlayer;
         public static Texture2D texFaceNeutral;
+        public static Texture2D texHudButton;
+        public static Texture2D texHudButtonText;
 
         public Game1()
         {
@@ -62,6 +64,8 @@ namespace Engine
             graphics.PreferredBackBufferWidth = VIEW_WIDTH;
             graphics.PreferredBackBufferHeight = VIEW_HEIGHT;
             Content.RootDirectory = "Content";
+
+            IsFixedTimeStep = true;
         }
 
         /// <summary>
@@ -102,6 +106,8 @@ namespace Engine
             texWorld = Content.Load<Texture2D>("texWorld");
             texPlayer = Content.Load<Texture2D>("texPlayer");
             texFaceNeutral = Content.Load<Texture2D>("texFaceNeutral");
+            texHudButton = Content.Load<Texture2D>("texHudButton");
+            texHudButtonText = Content.Load<Texture2D>("texHudButtonText");
         }
 
         /// <summary>
@@ -122,6 +128,12 @@ namespace Engine
 
             texFaceNeutral.Dispose();
             texFaceNeutral = null;
+
+            texHudButton.Dispose();
+            texHudButton = null;
+
+            texHudButtonText.Dispose();
+            texHudButtonText = null;
         }
 
         /// <summary>
