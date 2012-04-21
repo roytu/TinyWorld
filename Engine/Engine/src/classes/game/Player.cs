@@ -10,7 +10,7 @@ namespace Engine
 {
     public class Player : Object
     {
-        private float speed;
+        public float speed;
         public float pos;
 
         public Player(int x, int y) : base(x,y)
@@ -22,7 +22,7 @@ namespace Engine
             xoff = width / frameCount / 2;
             yoff = height;
 
-            speed = 1;
+            speed = 0.5f;
             pos = 0;
         }
         public override void Update()

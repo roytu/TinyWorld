@@ -12,9 +12,7 @@ namespace Engine
         public Hud()
         {
             Sprite = null;
-            HudButton b = new HudButton(0);
-            b.x = 715;
-            b.y = 75;
+            HudButton b = new HudButton(715, 75, 0);
         }
         public override void Update()
         {
