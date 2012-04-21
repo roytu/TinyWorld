@@ -46,6 +46,24 @@
       <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texHudButtonText.xnb</Output>
       <Time>2012-04-21T16:24:57.3726488-04:00</Time>
     </Item>
+    <Item>
+      <Source>texObjEnergy.png</Source>
+      <Name>texObjEnergy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texObjEnergy.xnb</Output>
+      <Time>2012-04-21T16:57:15.6835138-04:00</Time>
+    </Item>
+    <Item>
+      <Source>texDecalLight.png</Source>
+      <Name>texDecalLight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texDecalLight.xnb</Output>
+      <Time>2012-04-21T17:21:38.1251607-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{FA686DF9-B4AD-410B-8746-0C4E6F0194F9}</ContentProjectGUID>

@@ -59,6 +59,8 @@ namespace Engine
         public static Texture2D texFaceNeutral;
         public static Texture2D texHudButton;
         public static Texture2D texHudButtonText;
+        public static Texture2D texObjEnergy;
+        public static Texture2D texDecalLight;
 
         public Game1()
         {
@@ -113,6 +115,8 @@ namespace Engine
             texFaceNeutral = Content.Load<Texture2D>("texFaceNeutral");
             texHudButton = Content.Load<Texture2D>("texHudButton");
             texHudButtonText = Content.Load<Texture2D>("texHudButtonText");
+            texObjEnergy = Content.Load<Texture2D>("texObjEnergy");
+            texDecalLight = Content.Load<Texture2D>("texDecalLight");
         }
 
         /// <summary>
@@ -139,6 +143,12 @@ namespace Engine
 
             texHudButtonText.Dispose();
             texHudButtonText = null;
+
+            texObjEnergy.Dispose();
+            texObjEnergy = null;
+
+            texDecalLight.Dispose();
+            texDecalLight = null;
         }
 
         /// <summary>

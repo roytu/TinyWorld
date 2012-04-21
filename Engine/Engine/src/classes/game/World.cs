@@ -22,7 +22,6 @@ namespace Engine
         public override void Update()
         {
             base.Update();
-            angle -= (float)ExtConstants.PI_TWO / 360;
         }
     }
 }

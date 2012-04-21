@@ -11,7 +11,7 @@ namespace Engine
     public class Player : Object
     {
         private float speed;
-        private float pos;
+        public float pos;
 
         public Player(int x, int y) : base(x,y)
         {

@@ -11,10 +11,11 @@ namespace Engine
 {
     public class GameHandler : Object
     {
+        public Player player;
         public GameHandler()
         {
             new World();
-            new Player(Game1.VIEW_WIDTH / 2, Game1.VIEW_HEIGHT / 2);
+            player = new Player(Game1.VIEW_WIDTH / 2, Game1.VIEW_HEIGHT / 2);
             new Hud();
         }
         public override void Update()
