@@ -54,6 +54,7 @@ namespace Engine
 
         public static Texture2D texWorld;
         public static Texture2D texPlayer;
+        public static Texture2D texFaceNeutral;
 
         public Game1()
         {
@@ -72,6 +73,7 @@ namespace Engine
         protected override void Initialize()
         {
             bkgColor = new Color(153, 125, 182);
+            IsMouseVisible = true;
             // TODO: Add your initialization logic here
             base.Initialize();
 
@@ -99,6 +101,7 @@ namespace Engine
 
             texWorld = Content.Load<Texture2D>("texWorld");
             texPlayer = Content.Load<Texture2D>("texPlayer");
+            texFaceNeutral = Content.Load<Texture2D>("texFaceNeutral");
         }
 
         /// <summary>
@@ -116,6 +119,9 @@ namespace Engine
 
             texPlayer.Dispose();
             texPlayer = null;
+
+            texFaceNeutral.Dispose();
+            texFaceNeutral = null;
         }
 
         /// <summary>
