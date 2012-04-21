@@ -70,7 +70,7 @@ namespace Engine
         /// </summary>
         protected override void Initialize()
         {
-            bkgColor = Color.White;
+            bkgColor = new Color(153, 125, 182);
             // TODO: Add your initialization logic here
             base.Initialize();
 
