@@ -1,1 +1,2 @@
 Content\texWorld.xnb
+Content\texPlayer.xnb

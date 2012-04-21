@@ -10,6 +10,15 @@
       <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texWorld.xnb</Output>
       <Time>2012-04-21T11:13:11.2070304-04:00</Time>
     </Item>
+    <Item>
+      <Source>texPlayer.png</Source>
+      <Name>texPlayer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texPlayer.xnb</Output>
+      <Time>2012-04-21T12:28:54.0055505-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{FA686DF9-B4AD-410B-8746-0C4E6F0194F9}</ContentProjectGUID>

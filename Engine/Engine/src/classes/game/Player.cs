@@ -11,7 +11,8 @@ namespace Engine
     {
         public Player(int x, int y) : base(x,y)
         {
-            Sprite = null;
+            Sprite = Game1.texPlayer;
+            frameCount = 4;
 
             xoff = width / 2;
             yoff = height;
@@ -25,6 +26,8 @@ namespace Engine
             }
             #endregion
 
+            x = Game1.VIEW_WIDTH / 2 + (float)Math.Cos(ExtConstants.PI_TWO / 4) * 100;
+            y = Game1.VIEW_HEIGHT / 2 - (float)Math.Sin(ExtConstants.PI_TWO / 4) * 100;
         }
     }
 }

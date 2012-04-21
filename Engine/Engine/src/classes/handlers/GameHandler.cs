@@ -14,7 +14,7 @@ namespace Engine
         public GameHandler()
         {
             new World();
-            
+            new Player(Game1.VIEW_WIDTH / 2, Game1.VIEW_HEIGHT / 2);
         }
         public override void Update()
         {

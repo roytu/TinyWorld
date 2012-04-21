@@ -53,6 +53,7 @@ namespace Engine
         public static Texture2D prSquare;
 
         public static Texture2D texWorld;
+        public static Texture2D texPlayer;
 
         public Game1()
         {
@@ -97,6 +98,7 @@ namespace Engine
             prSquare.SetData<Color>(new Color[1] { Color.White });
 
             texWorld = Content.Load<Texture2D>("texWorld");
+            texPlayer = Content.Load<Texture2D>("texPlayer");
         }
 
         /// <summary>
@@ -111,6 +113,9 @@ namespace Engine
 
             texWorld.Dispose();
             texWorld = null;
+
+            texPlayer.Dispose();
+            texPlayer = null;
         }
 
         /// <summary>
