@@ -13,6 +13,7 @@ namespace Engine
     {
         public GameHandler()
         {
+            new World();
         }
         public override void Update()
         {

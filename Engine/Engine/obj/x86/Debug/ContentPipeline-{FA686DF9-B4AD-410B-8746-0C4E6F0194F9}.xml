@@ -2,22 +2,13 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>sPlayer.png</Source>
-      <Name>sPlayer</Name>
+      <Source>texWorld.png</Source>
+      <Name>texWorld</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Owner\Desktop\C#\Engine\Engine\Engine\bin\x86\Debug\Content\sPlayer.xnb</Output>
-      <Time>2012-03-01T13:28:03.1042228-05:00</Time>
-    </Item>
-    <Item>
-      <Source>sWall.png</Source>
-      <Name>sWall</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Owner\Desktop\C#\Engine\Engine\Engine\bin\x86\Debug\Content\sWall.xnb</Output>
-      <Time>2012-03-01T13:29:05.8768132-05:00</Time>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texWorld.xnb</Output>
+      <Time>2012-04-21T10:34:25.9047176-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -26,10 +17,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Owner\Desktop\C#\Engine\Engine\EngineContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Owner\Desktop\C#\Engine\Engine\Engine\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Owner\Desktop\C#\Engine\Engine\Engine\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Owner\Desktop\C#\Engine\Engine\Engine\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\EngineContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

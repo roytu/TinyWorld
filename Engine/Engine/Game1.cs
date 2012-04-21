@@ -52,6 +52,8 @@ namespace Engine
         public static GraphicsDevice graphicsDevice;
         public static Texture2D prSquare;
 
+        public static Texture2D texWorld;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -93,6 +95,8 @@ namespace Engine
             // TODO: use this.Content to load your game content here
             prSquare = new Texture2D(GraphicsDevice, 1, 1);
             prSquare.SetData<Color>(new Color[1] { Color.White });
+
+            texWorld = Content.Load<Texture2D>("texWorld");
         }
 
         /// <summary>
@@ -104,6 +108,9 @@ namespace Engine
             // TODO: Unload any non ContentManager content here
             prSquare.Dispose();
             prSquare = null;
+
+            texWorld.Dispose();
+            texWorld = null;
         }
 
         /// <summary>

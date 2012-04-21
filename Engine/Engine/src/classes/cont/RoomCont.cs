@@ -42,25 +42,6 @@ namespace Engine
                     int _height=_room.roomHeight;
 
                     gameHandler = new GameHandler();
-
-                    for (int i = _data.Count - 1; i >= 0; i--)
-                    {
-                        for (int y = 0; y < _height; y++)
-                        {
-                            for (int x = 0; x < _width; x++)
-                            {
-                                switch (_data[i][y * _width + x])
-                                {
-                                    case T_PLAYER:
-                                        new Player(x * 32, y * 32);
-                                        break;
-                                    case T_WALL_BASIC:
-                                        new WallBasic(x * 32, y * 32);
-                                        break;
-                                }
-                            }
-                        }
-                    }
                     break;
             }
         }
