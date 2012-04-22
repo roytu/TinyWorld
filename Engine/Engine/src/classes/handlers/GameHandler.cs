@@ -15,14 +15,27 @@ namespace Engine
     {
         public Player player;
         //public RenderTarget2D rtCircles;
+        public int item;
+        public Hud hud;
 
         public GameHandler()
         {
             new World();
             player = new Player(Game1.VIEW_WIDTH / 2, Game1.VIEW_HEIGHT / 2);
-            new Hud();
+            hud = new Hud();
 
             //rtCircles = new RenderTarget2D(Game1.graphicsDevice, Game1.VIEW_WIDTH, Game1.VIEW_HEIGHT, true, Game1.graphicsDevice.DisplayMode.Format, DepthFormat.Depth24, 1, RenderTargetUsage.PreserveContents);
+            item = 0;
+        }
+        public void GiveItem()
+        {
+            item = 1;
+            hud.huditem.UpdateActions();
+        }
+        public void RemoveItem()
+        {
+            item = 0;
+            hud.huditem.UpdateActions();
         }
         public override void Update()
         {

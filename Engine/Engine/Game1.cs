@@ -56,11 +56,23 @@ namespace Engine
 
         public static Texture2D texWorld;
         public static Texture2D texPlayer;
+
         public static Texture2D texFaceNeutral;
+        public static Texture2D texFaceThinking;
+
+        public static Texture2D texHudItem;
+
         public static Texture2D texHudButton;
         public static Texture2D texHudButtonText;
         public static Texture2D texHudButtonResearching;
+
+        public static Texture2D texHudActions;
+        public static Texture2D texHudActionsOutline;
+        public static Texture2D texHudActionsText;
+
         public static Texture2D texObjEnergy;
+        public static Texture2D texObjBaby;
+
         public static Texture2D texGun;
 
         public static Texture2D texDecalLight;
@@ -122,11 +134,23 @@ namespace Engine
 
             texWorld = Content.Load<Texture2D>("texWorld");
             texPlayer = Content.Load<Texture2D>("texPlayer");
+
             texFaceNeutral = Content.Load<Texture2D>("texFaceNeutral");
+            texFaceThinking = Content.Load<Texture2D>("texFaceThinking");
+
+            texHudItem = Content.Load<Texture2D>("texHudItem");
+
             texHudButton = Content.Load<Texture2D>("texHudButton");
             texHudButtonText = Content.Load<Texture2D>("texHudButtonText");
             texHudButtonResearching = Content.Load<Texture2D>("texHudButtonResearching");
+
+            texHudActions = Content.Load<Texture2D>("texHudActions");
+            texHudActionsOutline = Content.Load<Texture2D>("texHudActionsOutline");
+            texHudActionsText = Content.Load<Texture2D>("texHudActionsText");
+
             texObjEnergy = Content.Load<Texture2D>("texObjEnergy");
+            texObjBaby = Content.Load<Texture2D>("texObjBaby");
+
             texGun = Content.Load<Texture2D>("texGun");
 
             texDecalLight = Content.Load<Texture2D>("texDecalLight");
@@ -152,6 +176,12 @@ namespace Engine
             texFaceNeutral.Dispose();
             texFaceNeutral = null;
 
+            texFaceThinking.Dispose();
+            texFaceThinking = null;
+
+            texHudItem.Dispose();
+            texHudItem = null;
+
             texHudButton.Dispose();
             texHudButton = null;
 
@@ -161,8 +191,20 @@ namespace Engine
             texHudButtonResearching.Dispose();
             texHudButtonResearching = null;
 
+            texHudActions.Dispose();
+            texHudActions = null;
+
+            texHudActionsOutline.Dispose();
+            texHudActionsOutline = null;
+
+            texHudActionsText.Dispose();
+            texHudActionsText = null;
+
             texObjEnergy.Dispose();
             texObjEnergy = null;
+
+            texObjBaby.Dispose();
+            texObjBaby = null;
 
             texGun.Dispose();
             texGun = null;

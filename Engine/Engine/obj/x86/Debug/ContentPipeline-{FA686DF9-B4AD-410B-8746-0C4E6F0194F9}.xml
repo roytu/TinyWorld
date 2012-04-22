@@ -91,6 +91,60 @@
       <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texHudButtonResearching.xnb</Output>
       <Time>2012-04-22T08:13:09.011736-04:00</Time>
     </Item>
+    <Item>
+      <Source>texFaceThinking.png</Source>
+      <Name>texFaceThinking</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texFaceThinking.xnb</Output>
+      <Time>2012-04-22T08:32:04.0466563-04:00</Time>
+    </Item>
+    <Item>
+      <Source>texHudItem.png</Source>
+      <Name>texHudItem</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texHudItem.xnb</Output>
+      <Time>2012-04-22T09:00:35.5345478-04:00</Time>
+    </Item>
+    <Item>
+      <Source>texHudActions.png</Source>
+      <Name>texHudActions</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texHudActions.xnb</Output>
+      <Time>2012-04-22T09:10:35.2098473-04:00</Time>
+    </Item>
+    <Item>
+      <Source>texHudActionsOutline.png</Source>
+      <Name>texHudActionsOutline</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texHudActionsOutline.xnb</Output>
+      <Time>2012-04-22T09:13:04.234371-04:00</Time>
+    </Item>
+    <Item>
+      <Source>texHudActionsText.png</Source>
+      <Name>texHudActionsText</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texHudActionsText.xnb</Output>
+      <Time>2012-04-22T18:30:10.917968-04:00</Time>
+    </Item>
+    <Item>
+      <Source>texObjBaby.png</Source>
+      <Name>texObjBaby</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texObjBaby.xnb</Output>
+      <Time>2012-04-22T17:53:56.7343968-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{FA686DF9-B4AD-410B-8746-0C4E6F0194F9}</ContentProjectGUID>

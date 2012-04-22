@@ -119,6 +119,9 @@
     <Compile Include="src\classes\ext\ExtConstants.cs" />
     <Compile Include="src\classes\ext\ExtTexture.cs" />
     <Compile Include="src\classes\ext\Ext.cs" />
+    <Compile Include="src\classes\game\ObjBaby.cs" />
+    <Compile Include="src\classes\game\HudActionButton.cs" />
+    <Compile Include="src\classes\game\HudItem.cs" />
     <Compile Include="src\classes\game\HudButtonResearching.cs" />
     <Compile Include="src\classes\game\Gun.cs" />
     <Compile Include="src\classes\game\DecalCircle2.cs" />
