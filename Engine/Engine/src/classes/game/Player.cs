@@ -13,6 +13,8 @@ namespace Engine
         public float speed;
         public float pos;
 
+        private Gun gun;
+
         public Player(int x, int y) : base(x,y)
         {
             Sprite = Game1.texPlayer;
@@ -24,6 +26,8 @@ namespace Engine
 
             speed = 0.5f;
             pos = 0;
+
+            gun = new Gun();
         }
         public override void Update()
         {
@@ -40,6 +44,14 @@ namespace Engine
             x = Game1.VIEW_WIDTH / 2 + (float)Math.Cos(-ExtConstants.PI_TWO * pos / 360) * 100;
             y = Game1.VIEW_HEIGHT / 2 - (float)Math.Sin(-ExtConstants.PI_TWO * pos / 360) * 100;
             angle = (float)ExtConstants.PI_TWO * ((pos + 90) / 360);
+
+            float xoff = 36;
+            float yoff = -61+(int)frame;
+            float d = (float)Math.Sqrt(xoff * xoff + yoff * yoff);
+            float dir = (float)(Math.Atan2(yoff, xoff)+Math.PI/2);
+            gun.x = Game1.VIEW_WIDTH / 2 + (float)Math.Cos(-ExtConstants.PI_TWO * pos / 360) * 100 + (float)Math.Cos(- dir - ExtConstants.PI_TWO * pos / 360) * d;
+            gun.y = Game1.VIEW_HEIGHT / 2 - (float)Math.Sin(-ExtConstants.PI_TWO * pos / 360) * 100 - (float)Math.Sin(- dir - ExtConstants.PI_TWO * pos / 360) * d;
+            gun.angle = (float)ExtConstants.PI_TWO * ((pos + 90) / 360);
         }
         public override void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch sb)
         {

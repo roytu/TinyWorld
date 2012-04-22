@@ -59,7 +59,10 @@ namespace Engine
         public static Texture2D texFaceNeutral;
         public static Texture2D texHudButton;
         public static Texture2D texHudButtonText;
+        public static Texture2D texHudButtonResearching;
         public static Texture2D texObjEnergy;
+        public static Texture2D texGun;
+
         public static Texture2D texDecalLight;
         public static Texture2D texDecalCircle;
 
@@ -122,7 +125,10 @@ namespace Engine
             texFaceNeutral = Content.Load<Texture2D>("texFaceNeutral");
             texHudButton = Content.Load<Texture2D>("texHudButton");
             texHudButtonText = Content.Load<Texture2D>("texHudButtonText");
+            texHudButtonResearching = Content.Load<Texture2D>("texHudButtonResearching");
             texObjEnergy = Content.Load<Texture2D>("texObjEnergy");
+            texGun = Content.Load<Texture2D>("texGun");
+
             texDecalLight = Content.Load<Texture2D>("texDecalLight");
             texDecalCircle = Content.Load<Texture2D>("texDecalCircle");
         }
@@ -152,8 +158,14 @@ namespace Engine
             texHudButtonText.Dispose();
             texHudButtonText = null;
 
+            texHudButtonResearching.Dispose();
+            texHudButtonResearching = null;
+
             texObjEnergy.Dispose();
             texObjEnergy = null;
+
+            texGun.Dispose();
+            texGun = null;
 
             texDecalLight.Dispose();
             texDecalLight = null;

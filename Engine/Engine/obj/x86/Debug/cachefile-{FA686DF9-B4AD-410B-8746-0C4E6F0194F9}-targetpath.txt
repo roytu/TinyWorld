@@ -6,3 +6,5 @@ Content\texHudButtonText.xnb
 Content\texObjEnergy.xnb
 Content\texDecalLight.xnb
 Content\texDecalCircle.xnb
+Content\texGun.xnb
+Content\texHudButtonResearching.xnb

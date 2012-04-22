@@ -12,7 +12,8 @@ namespace Engine
         public Hud()
         {
             Sprite = null;
-            HudButton b = new HudButton(715, 75, 0);
+            new HudButton(715, 75, 0);
+            new HudButton(715, 200, 1);
         }
         public override void Update()
         {

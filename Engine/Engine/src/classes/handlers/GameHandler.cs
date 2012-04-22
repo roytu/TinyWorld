@@ -26,10 +26,10 @@ namespace Engine
         }
         public override void Update()
         {
+            Random rand = new Random();
             for (int i = 0; i < player.speed; i++)
             {
-                Random rand = new Random();
-                if (rand.Next(10)==0)
+                if (rand.Next(60)==0)
                 {
                     new DecalCircle(rand.Next(Game1.VIEW_WIDTH), rand.Next(Game1.VIEW_HEIGHT));
                 }
