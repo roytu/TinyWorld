@@ -11,6 +11,7 @@ namespace Engine
     public class ObjCont
     {
         public List<Object> objectArray;
+
         public ObjCont()
         {
             objectArray = new List<Object>();

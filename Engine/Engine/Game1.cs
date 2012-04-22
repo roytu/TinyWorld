@@ -68,10 +68,16 @@ namespace Engine
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferWidth = VIEW_WIDTH;
             graphics.PreferredBackBufferHeight = VIEW_HEIGHT;
+            //graphics.PreparingDeviceSettings+=new EventHandler<PreparingDeviceSettingsEventArgs>(graphics_PreparingDeviceSettings);
             Content.RootDirectory = "Content";
 
             IsFixedTimeStep = true;
         }
+        /*
+         void graphics_PreparingDeviceSettings(object sender, PreparingDeviceSettingsEventArgs e)
+        {
+            e.GraphicsDeviceInformation.PresentationParameters.RenderTargetUsage = RenderTargetUsage.PreserveContents;
+        }*/
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.

@@ -119,6 +119,7 @@
     <Compile Include="src\classes\ext\ExtConstants.cs" />
     <Compile Include="src\classes\ext\ExtTexture.cs" />
     <Compile Include="src\classes\ext\Ext.cs" />
+    <Compile Include="src\classes\game\DecalCircle.cs" />
     <Compile Include="src\classes\game\HudButtonText.cs" />
     <Compile Include="src\classes\game\DecalLight.cs" />
     <Compile Include="src\classes\game\ObjEnergy.cs" />

@@ -64,6 +64,15 @@
       <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texDecalLight.xnb</Output>
       <Time>2012-04-21T17:21:38.1251607-04:00</Time>
     </Item>
+    <Item>
+      <Source>texDecalCircle.png</Source>
+      <Name>texDecalCircle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\Engine\bin\x86\Debug\Content\texDecalCircle.xnb</Output>
+      <Time>2012-04-21T19:24:58.3984321-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{FA686DF9-B4AD-410B-8746-0C4E6F0194F9}</ContentProjectGUID>
