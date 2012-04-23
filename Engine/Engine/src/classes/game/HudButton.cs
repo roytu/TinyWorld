@@ -14,6 +14,7 @@ namespace Engine
         private int type;
 
         private HudButtonText text;
+        private HudButtonEnergying energying;
         private HudButtonResearching researching;
         public HudButton(float x, float y, int type)
         {
@@ -31,6 +32,7 @@ namespace Engine
             text.x = x;
             text.y = y;
 
+            energying = new HudButtonEnergying(x, y);
             researching = new HudButtonResearching(x, y);
 
             depth = 0.42f;
@@ -48,16 +50,19 @@ namespace Engine
         public override void LeftClicked(int mouseX, int mouseY)
         {
             base.LeftClicked(mouseX, mouseY);
-            if (Math.Sqrt(Math.Pow(mouseX - x, 2) + Math.Pow(mouseY - y, 2)) < 50)
+            if (Game1.hRoomCont.gameHandler.player.state == 0)
             {
-                switch (type)
+                if (Math.Sqrt(Math.Pow(mouseX - x, 2) + Math.Pow(mouseY - y, 2)) < 50)
                 {
-                    case 0: //Energy
-                        new ObjEnergy((int)Game1.hRoomCont.gameHandler.player.pos, 0);
-                        break;
-                    case 1: //Research
-                        researching.BeginResearch();
-                        break;
+                    switch (type)
+                    {
+                        case 0: //Energy
+                            energying.BeginResearch();
+                            break;
+                        case 1: //Research
+                            researching.BeginResearch();
+                            break;
+                    }
                 }
             }
         }

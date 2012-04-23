@@ -15,10 +15,25 @@ namespace Engine
         public float pos;
         public int state;
 
-        private Gun gun;
+        public bool isLost;
+        public int delay;
 
+        private Gun gun;
+        public void Win()
+        {
+            gun.isWon = true;
+        }
+        public void Lose()
+        {
+            if (!isLost)
+            {
+                isLost = true;
+                gun.Remove();
+            }
+        }
         public Player(int x, int y) : base(x,y)
         {
+            isLost = false;
             Sprite = Game1.texPlayer;
             frameCount = 4;
             frameSpeed = 0.2f;
@@ -39,10 +54,15 @@ namespace Engine
         public override void Update()
         {
             base.Update();
+            if (isLost)
+            {
+                if (color.A > 0) { color.A--; }
+            }
             switch (state)
             {
                 case 0:
-                    pos += speed;
+                    if (!isLost && delay<=0) { pos += speed; }
+                    if (delay > 0) { delay--; }
 
                     x = Game1.VIEW_WIDTH / 2 + (float)Math.Cos(-ExtConstants.PI_TWO * pos / 360) * 100;
                     y = Game1.VIEW_HEIGHT / 2 - (float)Math.Sin(-ExtConstants.PI_TWO * pos / 360) * 100;
@@ -80,6 +100,7 @@ namespace Engine
                     faceSprite = Game1.texFaceThinking;
                     break;
             }
+            if (isLost || delay>0) { faceSprite = Game1.texFaceThinking; }
             Vector2 pos = new Vector2(_x, _y);
             Rectangle destRect = new Rectangle((int)pos.X, (int)pos.Y, (int)Math.Round((double)faceSprite.Width), (int)Math.Round((double)faceSprite.Height));
             sb.Draw(faceSprite, destRect, null, Color.White, angle, Vector2.Zero, Microsoft.Xna.Framework.Graphics.SpriteEffects.None, (float)(depth - 0.01));

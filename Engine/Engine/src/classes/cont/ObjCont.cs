@@ -11,10 +11,21 @@ namespace Engine
     public class ObjCont
     {
         public List<Object> objectArray;
-
+        public float shake;
+        public void setShake(int n)
+        {
+            shake += n;
+        }
+        public int getShake()
+        {
+            Random rand = new Random();
+            int result = (int)(rand.Next((int)Math.Round(shake * 2)) - Math.Round(shake));
+            return result;
+        }
         public ObjCont()
         {
             objectArray = new List<Object>();
+            shake = 0;
         }
         public void Init()
         {
@@ -26,6 +37,7 @@ namespace Engine
                 Object o = objectArray[i];
                 o.Update();
             }
+            if (shake > 0) { shake -= 0.1f; }
         }
         public void Draw(SpriteBatch sb)
         {

@@ -118,13 +118,14 @@ namespace Engine
         public virtual void LeftClicked(int mouseX, int mouseY) { }
         public virtual void RightClick(int mouseX, int mouseY) { }
         public virtual void RightClicked(int mouseX, int mouseY) { }
+        
         public virtual void Draw(SpriteBatch sb)
         {
             if(visible)
             {
                 if (Sprite != null)
                 {
-                    Rectangle destRect = new Rectangle((int)x, (int)y, (int)Math.Abs(Math.Round(width / frameCount * xscale)), (int)Math.Abs(Math.Round(height * yscale)));
+                    Rectangle destRect = new Rectangle((int)x + Game1.hObjCont.getShake(), (int)y + Game1.hObjCont.getShake(), (int)Math.Abs(Math.Round(width / frameCount * xscale)), (int)Math.Abs(Math.Round(height * yscale)));
                     Rectangle srcRect = new Rectangle((int)frame * (width / frameCount), 0, width / frameCount, height);
                     Vector2 orig = new Vector2(xoff, yoff);
                     if (xscale < 0 || yscale < 0)

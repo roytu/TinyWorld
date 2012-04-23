@@ -49,6 +49,9 @@ namespace Engine
             }
         }
 
+        public static SoundEffect musMain;
+        public static SoundEffectInstance mi;
+
         public static GraphicsDevice graphicsDevice;
         public static MouseState prevMouseState;
         public static MouseState currentMouseState;
@@ -77,6 +80,21 @@ namespace Engine
 
         public static Texture2D texDecalLight;
         public static Texture2D texDecalCircle;
+
+        public static Texture2D texDetonatorCircle;
+
+        public static Texture2D texTitle;
+        public static Texture2D texSpace;
+
+        public static SoundEffect sndEnergy;
+        public static SoundEffect sndExplode;
+        public static SoundEffect sndMakeEnergy;
+        public static SoundEffect sndNuke;
+        public static SoundEffect sndResearch;
+        public static SoundEffect sndShoot;
+
+        public static SoundEffect sndDropBaby;
+        public static SoundEffect sndStart;
 
         public Game1()
         {
@@ -129,6 +147,11 @@ namespace Engine
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            musMain = Content.Load<SoundEffect>("musMain");
+            mi = musMain.CreateInstance();
+            mi.IsLooped = true;
+            mi.Play();
+
             prSquare = new Texture2D(GraphicsDevice, 1, 1);
             prSquare.SetData<Color>(new Color[1] { Color.White });
 
@@ -155,6 +178,20 @@ namespace Engine
 
             texDecalLight = Content.Load<Texture2D>("texDecalLight");
             texDecalCircle = Content.Load<Texture2D>("texDecalCircle");
+
+            texDetonatorCircle = Content.Load<Texture2D>("texDetonatorCircle");
+
+            texTitle = Content.Load<Texture2D>("texTitle");
+            texSpace = Content.Load<Texture2D>("texSpace");
+
+            sndEnergy = Content.Load<SoundEffect>("sndEnergy");
+            sndExplode = Content.Load<SoundEffect>("sndExplode");
+            sndMakeEnergy = Content.Load<SoundEffect>("sndMakeEnergy");
+            sndNuke = Content.Load<SoundEffect>("sndNuke");
+            sndResearch = Content.Load<SoundEffect>("sndResearch");
+            sndShoot = Content.Load<SoundEffect>("sndShoot");
+            sndDropBaby = Content.Load<SoundEffect>("sndDropBaby");
+            sndStart = Content.Load<SoundEffect>("sndStart");
         }
 
         /// <summary>
@@ -214,6 +251,32 @@ namespace Engine
 
             texDecalCircle.Dispose();
             texDecalCircle = null;
+
+            texDetonatorCircle.Dispose();
+            texDetonatorCircle = null;
+
+            texTitle.Dispose();
+            texTitle = null;
+
+            texSpace.Dispose();
+            texSpace = null;
+
+            sndEnergy.Dispose();
+            sndEnergy = null;
+            sndExplode.Dispose();
+            sndExplode = null;
+            sndMakeEnergy.Dispose();
+            sndMakeEnergy = null;
+            sndNuke.Dispose();
+            sndNuke = null;
+            sndResearch.Dispose();
+            sndResearch = null;
+            sndShoot.Dispose();
+            sndShoot = null;
+            sndDropBaby.Dispose();
+            sndDropBaby = null;
+            sndStart.Dispose();
+            sndStart = null;
         }
 
         /// <summary>

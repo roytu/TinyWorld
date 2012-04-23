@@ -36,12 +36,8 @@ namespace Engine
             switch (rm)
             {
                 case RM_1:
-                    Room1 _room = new Room1();
-                    List<String> _data=_room.data;
-                    int _width=_room.roomWidth;
-                    int _height=_room.roomHeight;
-
-                    gameHandler = new GameHandler();
+                    new World();
+                    new Menu();
                     break;
             }
         }

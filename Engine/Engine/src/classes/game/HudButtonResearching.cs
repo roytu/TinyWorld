@@ -60,6 +60,7 @@ namespace Engine
                     visible = false;
 
                     Game1.hRoomCont.gameHandler.GiveItem();
+                    Game1.sndResearch.Play();
 
                     Game1.hRoomCont.gameHandler.player.SetState(0);
                 }

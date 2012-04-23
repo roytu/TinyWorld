@@ -11,9 +11,11 @@ namespace Engine
     public class ObjEnergy : Object
     {
         public int pos;
-        public int h;
+        public float h;
         private DecalLight light;
         public int owner;
+        private bool isAlive;
+        private float vsp;
         
         public ObjEnergy(int pos, int owner)
         {
@@ -26,8 +28,13 @@ namespace Engine
             yoff = Sprite.Height / 2;
 
             h = 0;
+            vsp = 0;
 
             light = new DecalLight(pos);
+            if (owner == 1) { light.frame = 1; }
+
+            isAlive = true;
+            depth = 0.13f;
         }
         public override void Update()
         {
@@ -37,21 +44,75 @@ namespace Engine
             y = Game1.VIEW_HEIGHT / 2 - (float)Math.Sin(-ExtConstants.PI_TWO * pos / 360) * (150 + h);
             angle = (float)ExtConstants.PI_TWO * ((float)(pos + 90) / 360);
 
-            Player ply = Game1.hRoomCont.gameHandler.player;
-            if (owner == 0)
+            if (isAlive)
             {
-                if ((ply.pos % 360) > pos && ((ply.pos - ply.speed) % 360 <= pos) && (ply.pos-ply.speed-pos>180))
+                Player ply = Game1.hRoomCont.gameHandler.player;
+                Enemy ene = Game1.hRoomCont.gameHandler.enemy;
+                if (owner == 0)
                 {
-                    ply.speed += 0.02f;
+                    if ((ply.pos % 360) > pos && ((ply.pos - ply.speed) % 360 <= pos) && (ply.pos - ply.speed - pos > 180))
+                    {
+                        ply.speed += 0.025f;
+                        Game1.sndEnergy.Play();
+                    }
+                    if (Math.Abs((ply.pos % 360) - (pos % 360)) <= 8)
+                    {
+                        light.frame = 2;
+                    }
+                    else
+                    {
+                        light.frame = 0;
+                    }
                 }
-                if(Math.Abs((ply.pos%360)-(pos%360))<=8)
+                else if (owner == 1)
                 {
-                    light.frame=2;
+                    if ((ene.pos % 360) > pos && ((ene.pos - ene.speed) % 360 <= pos) && (ene.pos - ene.speed - pos > 180))
+                    {
+                        ene.speed += 0.05f;
+                        Game1.sndEnergy.Play();
+                    }
+                    if (Math.Abs((ene.pos % 360) - (pos % 360)) <= 8)
+                    {
+                        light.frame = 3;
+                    }
+                    else
+                    {
+                        light.frame = 1;
+                    }
                 }
-                else
+            }
+            else
+            {
+                vsp -= 0.1f;
+                h += vsp;
+                if (h <= 0)
                 {
-                    light.frame=0;
+                    HitTargets();
+                    Explode();
+                    Remove();
                 }
+            }
+        }
+        public void Break()
+        {
+            isAlive = false;
+            light.Remove();
+        }
+        public void Explode()
+        {
+            Game1.sndExplode.Play();
+            new Explode();
+            Game1.hObjCont.setShake(5);
+        }
+        private void HitTargets()
+        {
+            float p = (Game1.hRoomCont.gameHandler.enemy.pos % 360);
+            float e = pos % 360;
+            while (Math.Abs(p - e) > 180) { p -= Math.Sign(p - e) * 360; }
+            if (Math.Abs(p - e) <= 30)
+            {
+                Game1.hRoomCont.gameHandler.enemy.speed *= 7 / 8;
+                Game1.hRoomCont.gameHandler.enemy.delay += 120;
             }
         }
     }

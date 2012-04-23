@@ -69,10 +69,34 @@ namespace Engine
                         switch (type)
                         {
                             case 0: //throw
+                                Game1.sndMakeEnergy.Play();
                                 new ObjBaby((int)(Game1.hRoomCont.gameHandler.player.pos % 360), 0, 0);
                                 break;
                             case 1: //drop
+                                Game1.sndDropBaby.Play();
                                 new ObjBaby((int)(Game1.hRoomCont.gameHandler.player.pos % 360), 0, 1);
+                                break;
+                        }
+                        break;
+                    case 2: //detonator
+                        switch (type)
+                        {
+                            case 2: //use
+                                new Detonator();
+                                break;
+                            case 1: //drop
+                                Game1.hRoomCont.gameHandler.RemoveItem();
+                                break;
+                        }
+                        break;
+                    case 3: //nuke
+                        switch (type)
+                        {
+                            case 2: //use
+                                new Nuke();
+                                break;
+                            case 1: //drop
+                                Game1.hRoomCont.gameHandler.RemoveItem();
                                 break;
                         }
                         break;
@@ -88,8 +112,9 @@ namespace Engine
                 Rectangle destRect = new Rectangle((int)x - xoff, (int)y - yoff, Game1.texHudActionsOutline.Width / 4, Game1.texHudActionsOutline.Height);
                 Rectangle srcRect = new Rectangle((int)outlineFrame * Game1.texHudActionsOutline.Width / 4, 0, Game1.texHudActionsOutline.Width / 4, Game1.texHudActionsOutline.Height);
                 sb.Draw(Game1.texHudActionsOutline, destRect, srcRect, Color.White);
-                destRect = new Rectangle((int)x - xoff, (int)y - yoff, Game1.texHudActionsText.Width / 2, Game1.texHudActionsText.Height);
-                srcRect = new Rectangle(type * Game1.texHudActionsText.Width / 2, 0, Game1.texHudActionsText.Width / 2, Game1.texHudActionsText.Height);
+                int fc = 3;
+                destRect = new Rectangle((int)x - xoff, (int)y - yoff, Game1.texHudActionsText.Width / fc, Game1.texHudActionsText.Height);
+                srcRect = new Rectangle(type * Game1.texHudActionsText.Width / fc, 0, Game1.texHudActionsText.Width / fc, Game1.texHudActionsText.Height);
                 sb.Draw(Game1.texHudActionsText, destRect, srcRect, Color.White);
             }
         }

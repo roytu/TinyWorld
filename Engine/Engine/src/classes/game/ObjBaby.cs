@@ -59,6 +59,7 @@ namespace Engine
             switch (action)
             {
                 case 0: //thrown
+                    if (h > 1000) { Remove(); }
                     x = Game1.VIEW_WIDTH / 2 + (float)Math.Cos(-pos * Math.PI / 180) * h;
                     y = Game1.VIEW_HEIGHT / 2 - (float)Math.Sin(-pos * Math.PI / 180) * h;
 
@@ -68,7 +69,7 @@ namespace Engine
                         if (o is ObjEnergy)
                         {
                             ObjEnergy energy = (ObjEnergy)o;
-                            if (energy.owner != owner && h > energy.h && Math.Abs(pos - energy.pos) % 360 < 8)
+                            if (energy.owner != owner && h > energy.h + 100 && Math.Abs(pos - energy.pos) % 360 < 8)
                             {
                                 listEnergy.Add(energy);
                             }
@@ -77,7 +78,7 @@ namespace Engine
                     foreach (ObjEnergy e in listEnergy)
                     {
                         //blow up energy
-                        e.Remove();
+                        e.Break();
                     }
                     if (listEnergy.Count > 0)
                     {
@@ -85,6 +86,16 @@ namespace Engine
                     }
                     break;
                 case 1: //dropped
+                    if (owner==0)
+                    {
+                        if (Math.Abs(Game1.hRoomCont.gameHandler.enemy.pos - pos) % 360 <= 8)
+                        {
+                            Game1.sndExplode.Play();
+                            Game1.hRoomCont.gameHandler.enemy.delay += 60;
+                            Game1.hObjCont.setShake(15);
+                            Remove();
+                        }
+                    }
                     break;
             }
         }

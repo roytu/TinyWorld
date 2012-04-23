@@ -27,17 +27,29 @@ namespace Engine
             {
                 b.Remove();
             }
+            HudActionButton ba;
             switch (Game1.hRoomCont.gameHandler.item)
             {
                 case 0: //none
                     
                     break;
                 case 1: //dead baby
-                    HudActionButton b;
-                    b = new HudActionButton(225, 530, 0);
-                    actionButtons.Add(b);
-                    b = new HudActionButton(575, 530, 1);
-                    actionButtons.Add(b);
+                    ba = new HudActionButton(225, 530, 0);
+                    actionButtons.Add(ba);
+                    ba = new HudActionButton(575, 530, 1);
+                    actionButtons.Add(ba);
+                    break;
+                case 2: //detonator
+                    ba = new HudActionButton(225, 530, 2);
+                    actionButtons.Add(ba);
+                    ba = new HudActionButton(575, 530, 1);
+                    actionButtons.Add(ba);
+                    break;
+                case 3: //nuke
+                    ba = new HudActionButton(225, 530, 2);
+                    actionButtons.Add(ba);
+                    ba = new HudActionButton(575, 530, 1);
+                    actionButtons.Add(ba);
                     break;
             }
         }
