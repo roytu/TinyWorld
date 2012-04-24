@@ -257,7 +257,7 @@
     <Settings>
       <ContentProjectGUID>{FA686DF9-B4AD-410B-8746-0C4E6F0194F9}</ContentProjectGUID>
       <TargetPlatform>Windows</TargetPlatform>
-      <TargetProfile>HiDef</TargetProfile>
+      <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
       <RootDirectory>C:\Users\Owner\Desktop\LUDUM DARE 23\src\TinyWorld\Engine\EngineContent\</RootDirectory>
