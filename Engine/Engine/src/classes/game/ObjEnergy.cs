@@ -111,7 +111,7 @@ namespace Engine
             while (Math.Abs(p - e) > 180) { p -= Math.Sign(p - e) * 360; }
             if (Math.Abs(p - e) <= 30)
             {
-                Game1.hRoomCont.gameHandler.enemy.speed *= 7 / 8;
+                //Game1.hRoomCont.gameHandler.enemy.speed *= 7 / 8;
                 Game1.hRoomCont.gameHandler.enemy.delay += 120;
             }
         }
