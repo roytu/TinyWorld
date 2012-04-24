@@ -59,7 +59,7 @@ namespace Engine
                 if (color.A > 0) { color.A--; }
             }
             Random rand = new Random();
-            if (rand.Next(300) == 0)
+            if (rand.Next(300) == 0 && delay<=0)
             {
                 new ObjEnergy((int)Game1.hRoomCont.gameHandler.enemy.pos, 1);
             }
